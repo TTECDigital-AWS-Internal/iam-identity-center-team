@@ -254,12 +254,12 @@ function Review(props) {
     items.sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1));
     const data = items.map((item) => {
       if (
-        item.status === "ended" ||
-        item.status === "revoked" ||
-        item.status === "in progress" ||
-        item.status === "scheduled"
+        item.status === "Ended" ||
+        item.status === "Revoked" ||
+        item.status === "In Progress" ||
+        item.status === "Scheduled"
       ) {
-        item.status = "approved";
+        item.status = "Approved";
       }
       return item;
     });
