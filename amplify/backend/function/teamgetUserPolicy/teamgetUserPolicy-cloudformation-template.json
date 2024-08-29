@@ -39,6 +39,9 @@
         "aws:asset:property": "Code"
       },
       "Properties": {
+        "Architectures": [
+          "arm64"
+        ],
         "Code": {
           "S3Bucket": {
             "Ref": "deploymentBucketName"
@@ -243,6 +246,14 @@
     "LambdaExecutionRole": {
       "Value": {
         "Ref": "LambdaExecutionRole"
+      }
+    },
+    "LambdaExecutionRoleArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "LambdaExecutionRole",
+          "Arn"
+        ]
       }
     }
   }
